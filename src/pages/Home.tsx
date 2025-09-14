@@ -5,7 +5,7 @@ import ProjectsSection from "@/components/home/ProjectsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CTASection from "@/components/home/CTASection";
 
-const Index = () => {
+export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection />
@@ -16,6 +16,4 @@ const Index = () => {
       <CTASection />
     </div>
   );
-};
-
-export default Index;
+}
