@@ -113,7 +113,7 @@ export const services = [
     description: "Full-stack web applications built with modern frameworks and best practices.",
     features: ["Responsive Design", "Progressive Web Apps", "API Integration", "Performance Optimization"],
     technologies: ["React", "Vue.js", "Angular", "Node.js", "Python", "PHP"],
-    startingPrice: "$5,000",
+    startingPrice: "₹4,00,000",
     icon: "🌐"
   },
   {
@@ -122,7 +122,7 @@ export const services = [
     description: "Native and cross-platform mobile applications for iOS and Android.",
     features: ["Native Performance", "Cross-Platform", "Push Notifications", "Offline Support"],
     technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Ionic"],
-    startingPrice: "$8,000",
+    startingPrice: "₹6,40,000",
     icon: "📱"
   },
   {
@@ -131,7 +131,7 @@ export const services = [
     description: "Scalable cloud infrastructure and migration services for modern businesses.",
     features: ["Auto Scaling", "Load Balancing", "Disaster Recovery", "Cost Optimization"],
     technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"],
-    startingPrice: "$3,000",
+    startingPrice: "₹2,40,000",
     icon: "☁️"
   },
   {
@@ -140,7 +140,7 @@ export const services = [
     description: "User-centered design that creates intuitive and engaging experiences.",
     features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
     technologies: ["Figma", "Adobe XD", "Sketch", "InVision", "Principle"],
-    startingPrice: "$2,500",
+    startingPrice: "₹2,00,000",
     icon: "🎨"
   },
   {
@@ -149,7 +149,7 @@ export const services = [
     description: "Intelligent solutions that automate processes and provide data-driven insights.",
     features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Process Automation"],
     technologies: ["TensorFlow", "PyTorch", "OpenAI", "AutoML", "RPA Tools"],
-    startingPrice: "$10,000",
+    startingPrice: "₹8,00,000",
     icon: "🤖"
   }
 ];
@@ -210,7 +210,7 @@ export const jobPositions = [
     type: "Full-time",
     remote: true,
     experience: "5+ years",
-    salary: "$120K - $160K",
+    salary: "₹96L - ₹1.28Cr",
     description: "We're looking for a senior full stack developer to join our growing team...",
     requirements: [
       "5+ years of experience with React and Node.js",
@@ -234,7 +234,7 @@ export const jobPositions = [
     type: "Full-time",
     remote: true,
     experience: "3+ years",
-    salary: "$100K - $140K",
+    salary: "₹80L - ₹1.12Cr",
     description: "Join our infrastructure team to help scale our cloud operations...",
     requirements: [
       "3+ years of experience with Docker and Kubernetes",

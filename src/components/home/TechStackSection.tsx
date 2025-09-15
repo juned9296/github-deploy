@@ -21,10 +21,24 @@ export default function TechStackSection() {
             Powered by{" "}
             <span className="text-gradient">Modern Technology</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We leverage the latest technologies and frameworks to build robust, 
-            scalable solutions that stand the test of time.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
+            We leverage cutting-edge technologies and industry-leading frameworks to build robust, 
+            scalable solutions that drive innovation and deliver exceptional performance.
           </p>
+          <div className="flex justify-center space-x-8 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <span>Latest Frameworks</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-secondary rounded-full"></div>
+              <span>Cloud-Native</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-accent rounded-full"></div>
+              <span>Enterprise Grade</span>
+            </div>
+          </div>
         </motion.div>
 
         {/* Continuous Scroll Animation */}

@@ -211,9 +211,9 @@
     to { box-shadow: 0 0 40px hsl(214 88% 35% / 0.6), 0 0 60px hsl(262 52% 47% / 0.3); }
   }
 
-  /* Scroll Animation for Tech Stack */
+  /* Scroll Animation for Tech Stack - Faster Speed */
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 15s linear infinite;
   }
 
   @keyframes scroll {

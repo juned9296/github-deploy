@@ -112,57 +112,32 @@ export default function USPSection() {
                 bounce: 0.4
               }}
             >
-              {index % 2 === 0 ? (
-                <SpotlightCard 
-                  className="h-full p-8 group relative overflow-hidden"
-                  spotlightColor="rgba(59, 130, 246, 0.3)"
-                >
-                  <div className="relative z-10">
-                    <motion.div 
-                      className={`w-20 h-20 bg-gradient-to-r ${card.gradient} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl`}
-                      whileHover={{ scale: 1.2, rotate: 12 }}
-                    >
-                      <card.icon className="w-10 h-10 text-white" />
-                    </motion.div>
-                    
-                    <h3 className="text-2xl font-bold mb-6 group-hover:text-primary transition-colors duration-500">
-                      {card.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground leading-relaxed text-base">
-                      {card.description}
-                    </p>
-                  </div>
-                </SpotlightCard>
-              ) : (
-                <AnimatedCard 
-                  variant={card.variant}
-                  className="h-full p-8 group relative overflow-hidden bg-gradient-to-br from-card via-card to-muted/20 border-2 border-gradient"
-                  delay={index * 0.1}
-                >
-                  <div className="relative z-10">
-                    <motion.div 
-                      className={`w-20 h-20 bg-gradient-to-r ${card.gradient} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl`}
-                      whileHover={{ scale: 1.2, rotate: -12 }}
-                    >
-                      <card.icon className="w-10 h-10 text-white" />
-                    </motion.div>
-                    
-                    <h3 className="text-2xl font-bold mb-6 group-hover:text-primary transition-colors duration-500">
-                      {card.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground leading-relaxed text-base">
-                      {card.description}
-                    </p>
-                  </div>
+              <SpotlightCard 
+                className="h-full p-8 group relative overflow-hidden bg-gradient-to-br from-card to-muted/30 border border-border/50"
+                spotlightColor="rgba(59, 130, 246, 0.2)"
+              >
+                <div className="relative z-10">
+                  <motion.div 
+                    className={`w-16 h-16 bg-gradient-to-r ${card.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}
+                    whileHover={{ scale: 1.1, rotate: 6 }}
+                  >
+                    <card.icon className="w-8 h-8 text-white" />
+                  </motion.div>
                   
-                  {/* Animated background pattern */}
-                  <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                    <div className={`absolute inset-0 bg-gradient-to-r ${card.gradient}`} />
-                  </div>
-                </AnimatedCard>
-              )}
+                  <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                    {card.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {card.description}
+                  </p>
+                </div>
+                
+                {/* Subtle background pattern */}
+                <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-300">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient}`} />
+                </div>
+              </SpotlightCard>
             </motion.div>
           ))}
         </div>

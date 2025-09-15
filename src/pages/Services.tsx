@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { CheckIcon, ArrowRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import HeroBackground from "@/components/ui/hero-background";
+import SpotlightCard from "@/components/ui/spotlight-card";
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
@@ -15,8 +17,8 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="py-24 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section ref={heroRef} className="py-24 relative overflow-hidden">
+        <HeroBackground />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -24,10 +26,10 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
               Our <span className="text-white/90">Services</span>
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/90">
               Comprehensive software development services tailored to your business needs. 
               From web applications to AI solutions, we've got you covered.
             </p>
@@ -60,19 +62,22 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={servicesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-card border border-border rounded-2xl p-8 card-hover group relative overflow-hidden"
               >
-                {/* Background Icon */}
-                <div className="absolute top-4 right-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-                  {service.icon}
-                </div>
+                <SpotlightCard 
+                  className="h-full p-8 group relative overflow-hidden bg-gradient-to-br from-card to-muted/30 border border-border/50"
+                  spotlightColor="rgba(59, 130, 246, 0.15)"
+                >
+                  {/* Background Icon */}
+                  <div className="absolute top-4 right-4 text-5xl opacity-5 group-hover:opacity-10 transition-opacity duration-300">
+                    {service.icon}
+                  </div>
 
-                <div className="relative z-10">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                  <div className="relative z-10">
+                  <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                  <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
                     {service.description}
                   </p>
 
@@ -178,6 +183,7 @@ export default function Services() {
                     </Dialog>
                   </div>
                 </div>
+                </SpotlightCard>
               </motion.div>
             ))}
           </div>

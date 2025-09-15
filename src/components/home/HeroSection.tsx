@@ -1,20 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon, PlayIcon, SparklesIcon } from "@heroicons/react/24/outline";
-import BackgroundBeams from "@/components/ui/background-beams";
+import HeroBackground from "@/components/ui/hero-background";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/20 to-background">
-      {/* Background Effects */}
-      <BackgroundBeams />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Clean Background with Animation */}
+      <HeroBackground />
       
-      {/* Animated Gradient Orbs */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-secondary/30 to-accent/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse delay-75" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse delay-150" />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 text-white">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,9 +48,9 @@ export default function HeroSection() {
                 transition={{ delay: 0.8, duration: 0.8 }}
                 className="block mb-4"
               >
-                <span className="text-gradient bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Transform
-                </span>
+              <span className="text-white drop-shadow-lg">
+                Transform
+              </span>
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -73,11 +68,11 @@ export default function HeroSection() {
               >
                 with{" "}
                 <span className="relative inline-block">
-                  <span className="text-gradient bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
+                  <span className="text-white drop-shadow-lg">
                     Innovation
                   </span>
                   <motion.div
-                    className="absolute -bottom-4 left-0 right-0 h-2 bg-gradient-to-r from-accent via-primary to-secondary rounded-full"
+                    className="absolute -bottom-4 left-0 right-0 h-2 bg-white/40 rounded-full"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 2, duration: 1.2, ease: "easeInOut" }}
@@ -92,13 +87,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 1 }}
-            className="text-xl md:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl md:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             We craft{" "}
             <motion.span
-              animate={{ color: ["#3b82f6", "#8b5cf6", "#06b6d4", "#3b82f6"] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="font-semibold"
+              animate={{ opacity: [1, 0.8, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="font-semibold text-white"
             >
               cutting-edge software solutions
             </motion.span>{" "}
@@ -116,12 +111,8 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05, rotate: 1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button className="bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 text-white font-semibold px-10 py-6 rounded-2xl shadow-2xl hover:shadow-glow transition-all duration-500 text-lg group relative overflow-hidden">
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  initial={false}
-                />
-                <span className="relative z-10 flex items-center">
+              <Button className="bg-white text-primary hover:bg-white/90 font-semibold px-10 py-6 rounded-2xl shadow-2xl hover:shadow-lg transition-all duration-300 text-lg group">
+                <span className="flex items-center">
                   Start Your Journey
                   <ArrowRightIcon className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
@@ -132,7 +123,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button className="bg-white/10 backdrop-blur-sm border-2 border-white/20 text-foreground hover:bg-white/20 font-semibold px-10 py-6 rounded-2xl shadow-xl transition-all duration-500 text-lg group">
+              <Button className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 font-semibold px-10 py-6 rounded-2xl shadow-xl transition-all duration-300 text-lg group">
                 <PlayIcon className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
                 Watch Our Story
               </Button>
@@ -166,7 +157,7 @@ export default function HeroSection() {
                 className="text-center group cursor-pointer"
               >
                 <motion.div 
-                  className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300`}
+                  className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
                   animate={{ 
                     filter: [
                       "hue-rotate(0deg)",
@@ -182,7 +173,7 @@ export default function HeroSection() {
                 >
                   {stat.number}
                 </motion.div>
-                <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                <div className="text-sm text-white/80 group-hover:text-white transition-colors duration-300">
                   {stat.label}
                 </div>
               </motion.div>

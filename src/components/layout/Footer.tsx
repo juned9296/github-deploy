@@ -62,8 +62,19 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-muted/50 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="relative bg-gradient-to-br from-primary/5 via-muted/30 to-secondary/5 border-t border-border overflow-hidden">
+      {/* Grid Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `
+            linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '30px 30px'
+        }}
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
