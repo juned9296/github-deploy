@@ -18,20 +18,20 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 84% 5%;
 
-    /* Brand Primary - Deep Blue */
-    --primary: 214 88% 35%;
+    /* Brand Primary - Emerald Green */
+    --primary: 160 84% 39%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 214 88% 30%;
+    --primary-hover: 160 84% 34%;
 
-    /* Brand Secondary - Purple */
-    --secondary: 262 52% 47%;
+    /* Brand Secondary - Teal */
+    --secondary: 173 82% 40%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 262 52% 42%;
+    --secondary-hover: 173 82% 35%;
 
-    /* Accent - Cyan */
-    --accent: 188 94% 43%;
+    /* Accent - Light Green */
+    --accent: 142 76% 36%;
     --accent-foreground: 0 0% 98%;
-    --accent-hover: 188 94% 38%;
+    --accent-hover: 142 76% 31%;
 
     /* Muted Colors */
     --muted: 210 40% 96%;
@@ -47,9 +47,9 @@
     --ring: 214 88% 35%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 88% 35%), hsl(262 52% 47%));
-    --gradient-accent: linear-gradient(135deg, hsl(188 94% 43%), hsl(214 88% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(214 88% 35%) 0%, hsl(262 52% 47%) 50%, hsl(188 94% 43%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(173 82% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 36%), hsl(160 84% 39%));
+    --gradient-hero: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(173 82% 40%) 50%, hsl(142 76% 36%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
 
     /* Shadows */
@@ -154,6 +154,7 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
