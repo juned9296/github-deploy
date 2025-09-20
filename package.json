@@ -3,7 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://juned9296.github.io/github-deploy",
+
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build", 
+
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
