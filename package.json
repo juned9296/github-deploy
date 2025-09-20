@@ -6,8 +6,9 @@
   "homepage": "https://juned9296.github.io/github-deploy",
 
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build", 
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist",
+
 
     "dev": "vite",
     "build": "vite build",
